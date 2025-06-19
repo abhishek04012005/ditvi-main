@@ -1,18 +1,20 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 // import Image from 'next/image';
-import Link from 'next/link';
-import styles from './hero.module.css';
+import Link from "next/link";
+import styles from "./hero.module.css";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    console.log("Site Name:", process.env.NEXT_PUBLIC_SITE_NAME);
+    console.log("Site URL:", process.env.NEXT_PUBLIC_SITE_URL);
     setIsVisible(true);
   }, []);
 
   return (
-    <section className={`${styles.hero} ${isVisible ? styles.visible : ''}`}>
+    <section className={`${styles.hero} ${isVisible ? styles.visible : ""}`}>
       <div className={styles.overlay}></div>
       <div className={styles.container}>
         <div className={styles.content}>
@@ -25,13 +27,12 @@ const Hero = () => {
             sustainability, and community development initiatives.
           </p>
           <div className={styles.buttonGroup}>
-           
             <Link href="/programs" className={styles.primaryButton}>
               Our Programs
             </Link>
           </div>
         </div>
-        
+
         <div className={styles.statsContainer}>
           <div className={styles.stat}>
             <span className={styles.statNumber}>1000+</span>
