@@ -41,9 +41,8 @@ yarn-error.log*
 next-env.d.ts
 
 # Environment files
+.env
 .env*.local
-.env.development
-.env.production
 
 # Other files
 node_modules/
