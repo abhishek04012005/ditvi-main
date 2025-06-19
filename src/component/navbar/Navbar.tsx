@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./navbar.module.css";
-import { mainNav } from "../../data/navigation.json";
+import { mainNav } from "../../data/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

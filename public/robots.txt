@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+
+# Host
+Host: https://ditvi.org
+
+# Sitemaps
+Sitemap: https://ditvi.org/sitemap.xml
