@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 import HealthImage from "../assets/healthcare.jpg";
 
 export interface Blog {
+  [x: string]: string;
   id: number;
   title: string;
   slug: string;

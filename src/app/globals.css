@@ -10,6 +10,19 @@
   --container-width: 1280px;
    --text: #2d2d2d;
   --card-bg: #fff;
+   --primary: #ff6000;
+  --secondary: #2563eb;
+  --accent: #16a34a;
+  --gradient-1: linear-gradient(135deg, #ff6000 0%, #ff8c42 100%);
+  --gradient-2: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --background: #f8fafc;
+  --card-bg: #ffffff;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {

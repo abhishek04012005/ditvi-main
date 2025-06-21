@@ -92,7 +92,6 @@ export const metadata: Metadata = {
 };
 
 
-
 export default function Blog() {
   return <BlogList />;
 }

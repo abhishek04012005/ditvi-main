@@ -4,13 +4,21 @@ import BlogDetail from "../../../component/blog/BlogDetail";
 import type { Metadata } from "next";
 import env from "../../../config/env";
 
-// Generate static paths for all blogs
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
+
+// ✅ Generate static paths
 export async function generateStaticParams() {
   return blogsContent.map((blog) => ({ slug: blog.slug }));
 }
 
-// Generate metadata for each blog page
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+// ✅ Generate dynamic metadata
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const blog = blogsContent.find((b) => b.slug === params.slug);
 
   if (!blog) {
@@ -19,7 +27,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description: "The requested blog could not be found.",
     };
   }
-
   return {
     title: `${blog.title} | Ditvi Foundation | Get Involved in Social Change`,
     description: blog.excerpt,
@@ -88,7 +95,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     alternates: {
       canonical: `https://ditvifoundation.org/blog/${blog.slug}`,
       languages: {
-        'en-US': `https://ditvi.org/blog/${blog.slug}`,
+        "en-US": `https://ditvi.org/blog/${blog.slug}`,
       },
     },
     category: "Blog",
