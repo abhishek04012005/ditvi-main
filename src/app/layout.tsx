@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://ditvi.org"),
   title: {
-    default: "Ditvi Foundation - Empowering Communities Through Social Change",
+    default: "Ditvi Foundation | NGO For Women Empowerment, Education, Environmental And Social Welfare",
     template: "%s | Ditvi Foundation",
   },
   description:
