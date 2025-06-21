@@ -113,11 +113,9 @@ export async function generateMetadata({
 }
 
 // Main page component that renders the blog detail
-export default function BlogPage({ params }: { params: { slug: string } }) {
+export default function BlogPage({ params }: PageProps) {
   const blog = blogsContent.find((b) => b.slug === params.slug);
   if (!blog) return notFound();
 
-  // DO NOT include a manual <head> block here.
-  // Next.js uses the metadata returned from generateMetadata.
   return <BlogDetail blog={blog} />;
 }
