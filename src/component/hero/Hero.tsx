@@ -8,10 +8,6 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    console.log("Site Name:", process.env.NEXT_PUBLIC_SITE_NAME);
-    console.log("Site URL:", process.env.NEXT_PUBLIC_SITE_URL);
-    console.log("Supabse URL", process.env.NEXT_PUBLIC_SUPABASE_URL);
-    console.log("Supabase Key", process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
     setIsVisible(true);
   }, []);
 
