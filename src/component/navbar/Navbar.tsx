@@ -5,6 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./navbar.module.css";
 import { mainNav } from "../../data/navigation";
+import Image from "next/image";
+import DitviLogo from '../../assets/logo.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,9 +34,13 @@ const Navbar = () => {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo} onClick={() => setIsOpen(false)}>
-          <span className={styles.logoText}>
-            Ditvi <span className={styles.foundation}>Foundation</span>
-          </span>
+            <div className={styles.logoWrapper}>
+            <Image
+              src={DitviLogo}
+              alt="Ditvi Foundation Logo"
+              className={styles.logoImage}
+            />
+            </div>
         </Link>
 
         <nav className={styles.desktopNav}>

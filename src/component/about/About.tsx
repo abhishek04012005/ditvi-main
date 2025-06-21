@@ -3,6 +3,34 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./about.module.css";
 import MissionImage from "../../assets/ourmission.jpg";
+import DirectorImage1 from "../../assets/director/director1.png"; 
+import DirectorImage2 from "../../assets/director/director2.png"; 
+import DirectorImage3 from "../../assets/director/director3.png";
+
+
+const values = [
+  {
+    icon: "🤝",
+    title: "Collaboration",
+    desc: "Working together to achieve greater impact.",
+  },
+  {
+    icon: "🌱",
+    title: "Sustainability",
+    desc: "Building long-term solutions for lasting change.",
+  },
+  {
+    icon: "💡",
+    title: "Innovation",
+    desc: "Embracing new ideas to empower communities.",
+  },
+];
+
+const milestones = [
+  { year: "2023", label: "Founded" },
+  { year: "50+", label: "Projects" },
+  { year: "National", label: "Recognition" },
+];
 
 interface AboutProps {
   isFullPage?: boolean;
@@ -13,17 +41,11 @@ const About = ({ isFullPage = false }: AboutProps) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
+      ([entry]) => setIsVisible(entry.isIntersecting),
       { threshold: 0.1 }
     );
-
     const element = document.querySelector(`.${styles.about}`);
-    if (element) {
-      observer.observe(element);
-    }
-
+    if (element) observer.observe(element);
     return () => observer.disconnect();
   }, []);
 
@@ -35,59 +57,116 @@ const About = ({ isFullPage = false }: AboutProps) => {
     >
       <div className={styles.container}>
         <div className={styles.grid}>
+          {/* Mission Section */}
           <div className={styles.content}>
             <h2 className={styles.title}>
               Our <span className={styles.highlight}>Mission</span>
             </h2>
             <p className={styles.description}>
-              At Ditvi Foundation, we believe in creating lasting positive
-              change through sustainable community development and education.
-              Our mission is to empower communities and transform lives.
+              Ditvi Foundation is dedicated to empowering communities through
+              sustainable development, education, and women empowerment. We
+              believe in creating lasting social impact by fostering
+              collaboration, innovation, and inclusivity.
             </p>
-
             <div className={styles.values}>
-              <div className={styles.valueItem}>
-                <div className={styles.valueIcon}>💡</div>
-                <h3>Innovation</h3>
-                <p>Creating sustainable solutions for community challenges</p>
-              </div>
-              <div className={styles.valueItem}>
-                <div className={styles.valueIcon}>🤝</div>
-                <h3>Collaboration</h3>
-                <p>Working together to achieve greater impact</p>
-              </div>
-              <div className={styles.valueItem}>
-                <div className={styles.valueIcon}>♻️</div>
-                <h3>Sustainability</h3>
-                <p>Building long-term solutions for lasting change</p>
-              </div>
+              {values.map((v) => (
+                <div className={styles.valueItem} key={v.title}>
+                  <span className={styles.valueIcon} aria-hidden="true">
+                    {v.icon}
+                  </span>
+                  <h3>{v.title}</h3>
+                  <p>{v.desc}</p>
+                </div>
+              ))}
             </div>
-
             <div className={styles.milestones}>
-              <div className={styles.milestone}>
-                <span className={styles.year}>2023</span>
-                <p>Foundation Established</p>
-              </div>
-              <div className={styles.milestone}>
-                <span className={styles.year}>2023</span>
-                <p>First Community Project</p>
-              </div>
-              <div className={styles.milestone}>
-                <span className={styles.year}>2024</span>
-                <p>National Recognition</p>
-              </div>
+              {milestones.map((m) => (
+                <div className={styles.milestone} key={m.year}>
+                  <span className={styles.year}>{m.year}</span>
+                  <p>{m.label}</p>
+                </div>
+              ))}
             </div>
           </div>
-
+          {/* Mission Image */}
           <div className={styles.imageSection}>
             <div className={styles.imageWrapper}>
               <Image
                 src={MissionImage}
-                alt="Ditvi Foundation Impact"
-                fill
+                alt="Ditvi Foundation Mission"
                 className={styles.image}
+                fill
                 priority={isFullPage}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
+            </div>
+          </div>
+        </div>
+        <div className={styles.directors}>
+          {/* Director Card */}
+          <div className={styles.directorCard}>
+            <div className={styles.directorPhoto}>
+              <Image
+                src={DirectorImage1}
+                alt="Anuradha Kumari, Director"
+                className={styles.directorImg}
+                width={80}
+                height={80}
+                priority
+              />
+            </div>
+            <div className={styles.directorDetails}>
+              <span className={styles.directorRole}>Director</span>
+              <h3 className={styles.directorName}>Anuradha Kumari</h3>
+              <p className={styles.directorBio}>
+                Leading Ditvi Foundation with vision and compassion, Anuradha
+                Kumari inspires positive change and empowers women across
+                communities.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.directorCard}>
+            <div className={styles.directorPhoto}>
+              <Image
+                src={DirectorImage2}
+                alt="Kanchan Kumari, Director"
+                className={styles.directorImg}
+                width={80}
+                height={80}
+                priority
+              />
+            </div>
+            <div className={styles.directorDetails}>
+              <span className={styles.directorRole}>Director</span>
+              <h3 className={styles.directorName}>Kanchan Kumari</h3>
+              <p className={styles.directorBio}>
+                Leading Ditvi Foundation with vision and compassion, Anuradha
+                Kumari inspires positive change and empowers women across
+                communities.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.directorCard}>
+            <div className={styles.directorPhoto}>
+              <Image
+                src={DirectorImage3}
+                alt="Indu Devi, Director"
+                className={styles.directorImg}
+                width={80}
+                height={80}
+                priority
+              />
+            </div>
+            <div className={styles.directorDetails}>
+              <span className={styles.directorRole}>Director</span>
+              <h3 className={styles.directorName}>Indu Devi</h3>
+              <p className={styles.directorBio}>
+                Leading Ditvi Foundation with vision and compassion, Anuradha
+                Kumari inspires positive change and empowers women across
+                communities.
+              </p>
             </div>
           </div>
         </div>

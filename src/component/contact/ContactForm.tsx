@@ -1,91 +1,192 @@
 "use client";
 
-import { useState } from 'react';
-import styles from './contact.module.css';
+import { useState } from "react";
+import styles from "./contact.module.css";
+import { ContactUsStorage } from "../../supabase/ContactSupabase";
+import type { ContactFormData } from "@/types/contact";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+    mobile: "",
   });
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+
+  const validateForm = () => {
+    const errors: Record<string, string> = {};
+
+    if (!formData.name.trim()) {
+      errors.name = "Name is required";
+    }
+
+    if (!formData.email.trim()) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = "Please enter a valid email";
+    }
+
+    if (!formData.mobile.trim()) {
+      errors.mobile = "Mobile number is required";
+    }
+
+    if (!formData.message.trim()) {
+      errors.message = "Message is required";
+    }
+
+    setFieldErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const resetForm = () => {
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+      mobile: "",
+    });
+    setFieldErrors({});
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('submitting');
+
+    if (!validateForm()) {
+      return;
+    }
+
+    setStatus("submitting");
+    setErrorMessage("");
 
     try {
-      // Add your form submission logic here
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulated API call
-      setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (_error) {
-      setStatus('error');
+      await ContactUsStorage.saveContactUs({
+        name: formData.name,
+        email: formData.email,
+        mobile: formData.mobile,
+        message: formData.message,
+      });
+
+      setStatus("success");
+      resetForm();
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setStatus("error");
+      setErrorMessage(
+        error instanceof Error ? error.message : "Failed to send message"
+      );
+    }
+  };
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    setFormData((prev: any) => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (fieldErrors[name]) {
+      setFieldErrors((prev) => ({ ...prev, [name]: "" }));
     }
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit} noValidate>
       <div className={styles.formGroup}>
         <input
           type="text"
+          name="name"
           placeholder="Your Name"
           value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          onChange={handleInputChange}
           required
-          className={styles.input}
+          className={`${styles.input} ${
+            fieldErrors.name ? styles.errorInput : ""
+          }`}
+          disabled={status === "submitting"}
         />
+        {fieldErrors.name && (
+          <span className={styles.errorText}>{fieldErrors.name}</span>
+        )}
       </div>
 
       <div className={styles.formGroup}>
         <input
           type="email"
+          name="email"
           placeholder="Your Email"
           value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          onChange={handleInputChange}
           required
-          className={styles.input}
+          className={`${styles.input} ${
+            fieldErrors.email ? styles.errorInput : ""
+          }`}
+          disabled={status === "submitting"}
         />
+        {fieldErrors.email && (
+          <span className={styles.errorText}>{fieldErrors.email}</span>
+        )}
       </div>
 
       <div className={styles.formGroup}>
         <input
-          type="text"
-          placeholder="Subject"
-          value={formData.subject}
-          onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+          type="tel"
+          name="mobile"
+          placeholder="Your Mobile"
+          value={formData.mobile}
+          onChange={handleInputChange}
           required
-          className={styles.input}
+          className={`${styles.input} ${
+            fieldErrors.mobile ? styles.errorInput : ""
+          }`}
+          disabled={status === "submitting"}
         />
+        {fieldErrors.mobile && (
+          <span className={styles.errorText}>{fieldErrors.mobile}</span>
+        )}
       </div>
 
       <div className={styles.formGroup}>
         <textarea
+          name="message"
           placeholder="Your Message"
           value={formData.message}
-          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          onChange={handleInputChange}
           required
-          className={styles.textarea}
+          className={`${styles.textarea} ${
+            fieldErrors.message ? styles.errorInput : ""
+          }`}
           rows={5}
+          disabled={status === "submitting"}
         />
+        {fieldErrors.message && (
+          <span className={styles.errorText}>{fieldErrors.message}</span>
+        )}
       </div>
 
       <button
         type="submit"
         className={styles.submitButton}
-        disabled={status === 'submitting'}
+        disabled={status === "submitting"}
       >
-        {status === 'submitting' ? 'Sending...' : 'Send Message'}
+        {status === "submitting" ? "Sending..." : "Send Message"}
       </button>
 
-      {status === 'success' && (
-        <p className={styles.successMessage}>Message sent successfully!</p>
+      {status === "success" && (
+        <p className={styles.successMessage}>
+          Thank you! Your message has been sent successfully.
+        </p>
       )}
-      {status === 'error' && (
-        <p className={styles.errorMessage}>Failed to send message. Please try again.</p>
+      {status === "error" && (
+        <p className={styles.errorMessage}>
+          {errorMessage || "Failed to send message. Please try again."}
+        </p>
       )}
     </form>
   );

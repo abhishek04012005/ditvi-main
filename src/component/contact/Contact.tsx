@@ -1,3 +1,4 @@
+// Contact.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -11,6 +12,47 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 interface ContactProps {
   isFullPage?: boolean;
 }
+
+const SOCIAL_LINKS = [
+  {
+    icon: FacebookIcon,
+    url: "https://facebook.com/ditvifoundation",
+    label: "Follow us on Facebook"
+  },
+  {
+    icon: InstagramIcon,
+    url: "https://instagram.com/ditvifoundation",
+    label: "Follow us on Instagram"
+  },
+  {
+    icon: PinterestIcon,
+    url: "https://in.pinterest.com/ditvifoundation/",
+    label: "Follow us on Pinterest"
+  },
+  {
+    icon: YouTubeIcon,
+    url: "https://www.youtube.com/@ditvifoundation",
+    label: "Subscribe to our YouTube channel"
+  }
+];
+
+const CONTACT_INFO = [
+  {
+    icon: "📍",
+    title: "Visit Us",
+    details: ["Near B.D College, Mithapur", "Patna, 800001"]
+  },
+  {
+    icon: "📞",
+    title: "Call Us",
+    details: ["+91 9263767441"]
+  },
+  {
+    icon: "✉️",
+    title: "Email Us",
+    details: ["care@ditvi.org"]
+  }
+];
 
 const Contact = ({ isFullPage = false }: ContactProps) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -49,72 +91,32 @@ const Contact = ({ isFullPage = false }: ContactProps) => {
             </p>
 
             <div className={styles.contactInfo}>
-              <div className={styles.contactItem}>
-                <div className={styles.icon}>📍</div>
-                <div>
-                  <h3>Visit Us</h3>
-                  <p>
-                    Near B.D College, Mithapur
-                    <br />
-                    Patna, 800001
-                  </p>
+              {CONTACT_INFO.map((info, index) => (
+                <div key={index} className={styles.contactItem}>
+                  <div className={styles.icon}>{info.icon}</div>
+                  <div>
+                    <h3>{info.title}</h3>
+                    {info.details.map((detail, i) => (
+                      <p key={i}>{detail}</p>
+                    ))}
+                  </div>
                 </div>
-              </div>
-
-              <div className={styles.contactItem}>
-                <div className={styles.icon}>📞</div>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+91 9263767441</p>
-                </div>
-              </div>
-
-              <div className={styles.contactItem}>
-                <div className={styles.icon}>✉️</div>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>care@ditvi.org</p>
-                </div>
-              </div>
+              ))}
             </div>
 
             <div className={styles.social}>
-              <a
-                href="https://facebook.com/ditvifoundation"
-                className={styles.socialLink}
-                aria-label="Follow us on Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FacebookIcon />
-              </a>
-              <a
-                href="https://instagram.com/ditvifoundation"
-                className={styles.socialLink}
-                aria-label="Follow us on Instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <InstagramIcon />
-              </a>
-              <a
-                href="https://in.pinterest.com/ditvifoundation/"
-                className={styles.socialLink}
-                aria-label="Follow us on Pinterest"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <PinterestIcon />
-              </a>
-              <a
-                href="https://www.youtube.com/@ditvifoundation"
-                className={styles.socialLink}
-                aria-label="Subscribe to our YouTube channel"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <YouTubeIcon />
-              </a>
+              {SOCIAL_LINKS.map(({ icon: Icon, url, label }, index) => (
+                <a
+                  key={index}
+                  href={url}
+                  className={styles.socialLink}
+                  aria-label={label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
           </div>
 

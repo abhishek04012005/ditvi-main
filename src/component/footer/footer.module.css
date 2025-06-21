@@ -33,6 +33,21 @@
   border-radius: 12px;
 }
 
+.logoWrapper {
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 150px;
+  height: auto;
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+
 .brandName {
   font-size: 1.5rem;
   font-weight: 700;

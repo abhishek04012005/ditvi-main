@@ -4,6 +4,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import styles from "./footer.module.css";
+import Image from "next/image";
+import DitviLogo from '../../assets/logo.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,7 +17,13 @@ const Footer = () => {
           {/* About Section */}
           <div className={styles.section}>
             <div className={styles.logoSection}>
-              <h3 className={styles.brandName}>Ditvi Foundation</h3>
+              <div className={styles.logoWrapper}>
+                <Image
+                  src={DitviLogo}
+                  alt="Ditvi Foundation Logo"
+                  className={styles.logoImage}
+                />
+              </div>
             </div>
             <p className={styles.aboutText}>
               Empowering communities through sustainable development and
@@ -78,20 +86,11 @@ const Footer = () => {
               <li>
                 <Link href="/contact">Contact Us</Link>
               </li>
+              <li>
+                <Link href="/blog">Blog</Link>
+              </li>
             </ul>
           </div>
-
-          {/* Programs */}
-          {/* <div className={styles.section}>
-            <h3 className={styles.sectionTitle}>Our Programs</h3>
-            <ul className={styles.linkList}>
-              <li><Link href="/programs/education">Education</Link></li>
-              <li><Link href="/programs/healthcare">Healthcare</Link></li>
-              <li><Link href="/programs/environment">Environment</Link></li>
-              <li><Link href="/programs/women-empowerment">Women Empowerment</Link></li>
-              <li><Link href="/programs/skill-development">Skill Development</Link></li>
-            </ul>
-          </div> */}
 
           {/* Contact Info */}
           <div className={styles.section}>

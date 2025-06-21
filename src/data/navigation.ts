@@ -23,11 +23,10 @@ export const mainNav = [
     path: "/contact",
     ariaLabel: "Contact us"
   },
-  {
+    {
     id: 5,
-    title: "Donate",
-    path: "/donate",
-    isButton: true,
-    ariaLabel: "Make a donation"
+    title: "Blog",
+    path: "/blog",
+    ariaLabel: "Blog"
   }
 ];
