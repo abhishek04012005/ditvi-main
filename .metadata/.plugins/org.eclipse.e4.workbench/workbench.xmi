@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_zqN9UU5wEfCCwcyj_bwH5A" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_zqN9Uk5wEfCCwcyj_bwH5A" bindingContexts="_zqN9W05wEfCCwcyj_bwH5A">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList/>&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;org.eclipse.ui.genericeditor.GenericEditor&quot; name=&quot;ContactForm.tsx&quot; tooltip=&quot;/home/abhishek002/work/Ditvi /Ditvi Main/ditvi-main/src/component/contact/ContactForm.tsx&quot;>&#xA;&lt;persistable uri=&quot;file:/home/abhishek002/work/Ditvi%20/Ditvi%20Main/ditvi-main/src/component/contact/ContactForm.tsx&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_zqN9Uk5wEfCCwcyj_bwH5A" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_1O9Ggk5wEfCCwcyj_bwH5A" label="%trimmedwindow.label.eclipseSDK" x="0" y="32" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
@@ -110,10 +110,10 @@
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_1jOta05wEfCCwcyj_bwH5A" containerData="7500" selectedElement="_1jOtbE5wEfCCwcyj_bwH5A">
               <children xsi:type="basic:PartSashContainer" xmi:id="_1jOtbE5wEfCCwcyj_bwH5A" containerData="7500" selectedElement="_1jOtbU5wEfCCwcyj_bwH5A" horizontal="true">
-                <children xsi:type="basic:PartSashContainer" xmi:id="_1jOtbU5wEfCCwcyj_bwH5A" containerData="7500" selectedElement="_1jOtb05wEfCCwcyj_bwH5A" horizontal="true">
+                <children xsi:type="basic:PartSashContainer" xmi:id="_1jOtbU5wEfCCwcyj_bwH5A" containerData="7500" selectedElement="_1jOtbk5wEfCCwcyj_bwH5A" horizontal="true">
                   <children xsi:type="advanced:Placeholder" xmi:id="_1jOtbk5wEfCCwcyj_bwH5A" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_1jCgIE5wEfCCwcyj_bwH5A"/>
                   <children xsi:type="basic:PartStack" xmi:id="_1jOtb05wEfCCwcyj_bwH5A" elementId="com.microsoft.copilot.eclipse.ui.chat.ChatViewMStack" containerData="2500" selectedElement="_1jOtcE5wEfCCwcyj_bwH5A">
-                    <tags>active</tags>
+                    <tags>noFocus</tags>
                     <children xsi:type="advanced:Placeholder" xmi:id="_1jOtcE5wEfCCwcyj_bwH5A" elementId="com.microsoft.copilot.eclipse.ui.chat.ChatView" ref="_1jOGUk5wEfCCwcyj_bwH5A" closeable="true">
                       <tags>View</tags>
                       <tags>inject</tags>
@@ -231,10 +231,19 @@
       <tags>View</tags>
       <tags>categoryTag:Help</tags>
     </sharedElements>
-    <sharedElements xsi:type="advanced:Area" xmi:id="_1jCgIE5wEfCCwcyj_bwH5A" elementId="org.eclipse.ui.editorss">
-      <children xsi:type="basic:PartStack" xmi:id="_1jCgIU5wEfCCwcyj_bwH5A" elementId="org.eclipse.e4.primaryDataStack">
+    <sharedElements xsi:type="advanced:Area" xmi:id="_1jCgIE5wEfCCwcyj_bwH5A" elementId="org.eclipse.ui.editorss" selectedElement="_1jCgIU5wEfCCwcyj_bwH5A">
+      <children xsi:type="basic:PartStack" xmi:id="_1jCgIU5wEfCCwcyj_bwH5A" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_ZREeUE57EfCpp6uL2BQiDw">
         <tags>EditorStack</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
+        <tags>active</tags>
+        <children xsi:type="basic:Part" xmi:id="_ZREeUE57EfCpp6uL2BQiDw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ContactForm.tsx" iconURI="platform:/plugin/org.eclipse.ui.genericeditor/icons/full/obj16/generic_editor.svg" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.ui.genericeditor.GenericEditor&quot; name=&quot;ContactForm.tsx&quot; partName=&quot;ContactForm.tsx&quot; title=&quot;ContactForm.tsx&quot; tooltip=&quot;/home/abhishek002/work/Ditvi /Ditvi Main/ditvi-main/src/component/contact/ContactForm.tsx&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; uri=&quot;file:/home/abhishek002/work/Ditvi%20/Ditvi%20Main/ditvi-main/src/component/contact/ContactForm.tsx&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>removeOnHide</tags>
+          <tags>org.eclipse.ui.genericeditor.GenericEditor</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
+        </children>
       </children>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_1jH_sE5wEfCCwcyj_bwH5A" elementId="org.eclipse.jdt.ui.PackageExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Package Explorer" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/eview16/package.svg" tooltip="" closeable="true">
@@ -388,8 +397,6 @@
       <tags>View</tags>
       <tags>inject</tags>
       <tags>categoryTag:GitHub Copilot</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_2WTJEE5wEfCCwcyj_bwH5A" elementId="com.microsoft.copilot.eclipse.ui.chat.ChatView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -409,7 +416,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_1TMGQE5wEfCCwcyj_bwH5A" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_GpPEsE50EfCcvfHhWOGoQA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.svg" tooltip="Print" command="_zrZpZE5wEfCCwcyj_bwH5A"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_wq1E8E55EfCpp6uL2BQiDw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.svg" tooltip="Print" command="_zrZpZE5wEfCCwcyj_bwH5A"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_1TMGQU5wEfCCwcyj_bwH5A" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -417,8 +424,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_1TMtUE5wEfCCwcyj_bwH5A" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_GpPrwE50EfCcvfHhWOGoQA" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.svg" tooltip="Undo" enabled="false" command="_zrWl4E5wEfCCwcyj_bwH5A"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_GpQS0E50EfCcvfHhWOGoQA" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.svg" tooltip="Redo" enabled="false" command="_zrX0Fk5wEfCCwcyj_bwH5A"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_wq1sAU55EfCpp6uL2BQiDw" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.svg" tooltip="Undo" enabled="false" command="_zrWl4E5wEfCCwcyj_bwH5A"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_wq2TEE55EfCpp6uL2BQiDw" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.svg" tooltip="Redo" enabled="false" command="_zrX0Fk5wEfCCwcyj_bwH5A"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_1TMtUU5wEfCCwcyj_bwH5A" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -433,13 +440,16 @@
       <children xsi:type="menu:ToolBar" xmi:id="_1txwgE5wEfCCwcyj_bwH5A" elementId="org.eclipse.search.searchActionSet">
         <tags>Draggable</tags>
       </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_ZYKk0E57EfCpp6uL2BQiDw" elementId="org.eclipse.ui.edit.text.actionSet.presentation">
+        <tags>Draggable</tags>
+      </children>
       <children xsi:type="menu:ToolBar" xmi:id="_1TMtU05wEfCCwcyj_bwH5A" elementId="group.nav" toBeRendered="false">
         <tags>toolbarSeparator</tags>
         <children xsi:type="menu:ToolBarSeparator" xmi:id="_1TMtVE5wEfCCwcyj_bwH5A" elementId="group.nav" toBeRendered="false"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_1TMtVU5wEfCCwcyj_bwH5A" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_GpQ54E50EfCcvfHhWOGoQA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.svg" tooltip="Pin Editor" enabled="false" type="Check" command="_zrZpGk5wEfCCwcyj_bwH5A"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_wq3hME55EfCpp6uL2BQiDw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.svg" tooltip="Pin Editor" type="Check" command="_zrZpGk5wEfCCwcyj_bwH5A"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_1TMtVk5wEfCCwcyj_bwH5A" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2486,7 +2496,7 @@
   <addons xmi:id="_zqOkZk5wEfCCwcyj_bwH5A" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_zqOkZ05wEfCCwcyj_bwH5A" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_zqYVYE5wEfCCwcyj_bwH5A" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_wdmhQU55EfCpp6uL2BQiDw" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_zrRGME5wEfCCwcyj_bwH5A" elementId="org.eclipse.team.ui.category.team" name="Version control (Team)" description="Actions that apply when working with a version control system"/>
   <categories xmi:id="_zrRtQE5wEfCCwcyj_bwH5A" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
