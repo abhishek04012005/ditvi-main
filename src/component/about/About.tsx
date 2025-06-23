@@ -29,7 +29,6 @@ const values = [
 const milestones = [
   { year: "2023", label: "Founded" },
   { year: "50+", label: "Projects" },
-  { year: "National", label: "Recognition" },
 ];
 
 interface AboutProps {
