@@ -24,13 +24,16 @@ export interface Blog {
   author: string;
 }
 
+
 export const blogsContent: Blog[] = [
   {
     id: 1,
     title: "Breaking Barriers: Stories of Women Leaders",
     slug: "breaking-barriers-women-leaders",
-    excerpt: "Inspiring journeys of women who shattered glass ceilings, driving change and innovation.",
-    content: "In this post, discover the remarkable stories of women who have defied expectations and led transformative efforts across industries. From corporate boardrooms to grassroots initiatives, learn how determination, innovation, and unyielding spirit have fueled their success. Keywords: women leaders, empowerment, breaking barriers.",
+    excerpt:
+      "Inspiring journeys of women who shattered glass ceilings, driving change and innovation.",
+    content:
+      "In this post, we unveil the remarkable journeys of women leaders who have defied expectations and transformed industries. These trailblazers have overcome deep-rooted obstacles to lead with vision and determination. From the boardrooms of multinational corporations to grassroots initiatives in local communities, their paths are marked by personal sacrifice, strategic brilliance, and relentless perseverance. Detailed interviews and extensive research illustrate how these leaders navigated male-dominated spaces, turned setbacks into stepping stones, and created new models of inclusive leadership. Their stories emphasize the importance of mentorship, resilience, and innovative thinking, inspiring a new generation to break free of limiting stereotypes. By examining historical challenges alongside modern achievements, the post reveals how evolving social, cultural, and economic forces have collectively enabled a shift toward gender equality in leadership. The message is clear: every barrier broken contributes to a future where collaboration, diversity, and empowerment are the norm. This comprehensive narrative offers readers a roadmap to challenge bias and embrace transformative change in their personal and professional pursuits.",
     date: "2025-06-20",
     image: Blog1Image,
     author: "Anuradha Kumari",
@@ -40,8 +43,10 @@ export const blogsContent: Blog[] = [
     id: 2,
     title: "Empowering Girls Through Education",
     slug: "empowering-girls-education",
-    excerpt: "Explore how quality education transforms lives and empowers young girls globally.",
-    content: "This article discusses the transformative power of education for young girls. It highlights successful programs, actionable strategies, and real-life stories that show how education builds self-confidence and opportunity. Keywords: education, empowerment, girls education, future leaders.",
+    excerpt:
+      "Explore how quality education transforms lives and empowers young girls globally.",
+    content:
+      "This article dives deep into the transformative power of education for young girls across the globe. It explains how quality learning environments, modern curricula, and forward-thinking policies create opportunities that go far beyond the classroom. By drawing on a wide range of successful programs and first-hand success stories, the narrative demonstrates how education builds self-confidence, fosters creativity, and unlocks potential. Through evidence-based research, interviews with educators, and inspiring testimonials from students, the article illustrates that education is not merely about academic achievement but also about nurturing leadership, resilience, and innovation. The post discusses community initiatives and digital learning tools that further bridge the gap between traditional learning and modern challenges. It makes a compelling case for why investing in education for girls leads to broader social and economic benefits by transforming families and communities. Ultimately, the piece is both an inspirational call to action and a practical guide for policymakers and stakeholders who wish to empower the next generation of women leaders.",
     date: "2025-06-18",
     image: Blog2Image,
     author: "Anuradha Kumari",
@@ -51,8 +56,10 @@ export const blogsContent: Blog[] = [
     id: 3,
     title: "Innovative Women in Tech: Pioneering the Digital Future",
     slug: "innovative-women-in-tech",
-    excerpt: "Discover how trailblazing women are reshaping the tech landscape with groundbreaking ideas.",
-    content: "The digital era is evolving thanks to innovative women in tech. This post features interviews and success stories that illustrate how female pioneers use creativity and technical expertise to lead digital innovation and disrupt the status quo. Keywords: technology, innovation, women in tech, digital transformation.",
+    excerpt:
+      "Discover how trailblazing women are reshaping the tech landscape with groundbreaking ideas.",
+    content:
+      "In the rapidly evolving digital era, innovative women in tech are rewriting the rules of what is possible. This post showcases the journeys of dynamic female pioneers who use technical expertise and creative problem-solving to drive digital innovation. Through immersive interviews and success stories, readers learn how these leaders advanced their careers despite institutional challenges and gender biases. The article explains how early setbacks and failures became crucial lessons leading to breakthrough insights in software development, cybersecurity, and digital transformation. It emphasizes the importance of supportive work cultures and continuous learning, while also highlighting how mentorship and community support are essential for nurturing talent. In a world where technology continually reshapes economies, these inspiring narratives serve as beacons for aspiring innovators. By offering detailed analyses of strategic decisions and visionary projects, the post presents a robust blueprint for building a more inclusive and forward-thinking tech industry.",
     date: "2025-06-17",
     image: Blog3Image,
     author: "Anuradha Kumari",
@@ -62,8 +69,10 @@ export const blogsContent: Blog[] = [
     id: 4,
     title: "Entrepreneurial Spirit: Launching Women-Led Startups",
     slug: "women-entrepreneurship",
-    excerpt: "Learn practical strategies and inspiring stories of women who built thriving startups.",
-    content: "This blog post delves into the world of women entrepreneurs who are setting new standards in business leadership. Covering funding advice, market insights, and personal journeys, it provides an actionable roadmap for launching and growing a successful enterprise. Keywords: entrepreneurship, startups, women entrepreneurs, business growth.",
+    excerpt:
+      "Learn practical strategies and inspiring stories of women who built thriving startups.",
+    content:
+      "This blog post delves into the vibrant world of women-led startups, celebrating the entrepreneurial spirit that is reshaping business landscapes around the globe. It presents detailed case studies and practical advice on overcoming funding challenges, developing innovative business models, and building resilient organizations. Through a series of personal anecdotes and expert insights, the narrative explains how determination, creative problem-solving, and strategic networking have empowered these entrepreneurs to disrupt stagnant industries. The post further explores the role of community support, mentorship programs, and digital marketing in driving business growth. It highlights how flexible thinking and adaptability propel women entrepreneurs to identify market gaps and turn visionary ideas into successful enterprises. In doing so, the article not only motivates aspiring founders but also underscores the broader socio-economic impact of supporting women in business. The comprehensive discussion provides a roadmap for launching and sustaining startups that are both profitable and socially responsible.",
     date: "2025-06-15",
     image: Blog4Image,
     author: "Anuradha Kumari",
@@ -73,8 +82,10 @@ export const blogsContent: Blog[] = [
     id: 5,
     title: "Mental Health and Well-being for Women",
     slug: "mental-health-women",
-    excerpt: "A comprehensive guide to managing mental health and achieving holistic well-being.",
-    content: "This content focuses on mental health and wellness strategies tailored for women. Explore practical advice on stress management, mindfulness practices, and self-care routines, while understanding common challenges and effective solutions. Keywords: mental health, well-being, self-care, women wellness.",
+    excerpt:
+      "A comprehensive guide to managing mental health and achieving holistic well-being.",
+    content:
+      "This content provides an in-depth guide to mental health and well-being tailored specifically for women. It examines the multifaceted challenges posed by stress, anxiety, and societal pressures, while offering actionable strategies to manage emotional health effectively. Drawing upon expert research, therapeutic practices, and personal narratives, the article emphasizes the role of mindfulness, regular physical activity, and self-care routines in building resilience. It explores innovative approaches such as cognitive behavioral techniques and creative therapies that help create a balanced lifestyle. The discussion includes the importance of community support and professional counseling, while also addressing the impact of cultural expectations on mental health. By laying out clear steps for self-improvement and offering real-life examples, the post seeks to empower women with the tools needed to cultivate lasting well-being. Ultimately, this guide serves as a resource for fostering mental strength, embracing self-compassion, and leading a life that prioritizes emotional and holistic wellness.",
     date: "2025-06-10",
     image: Blog5Image,
     author: "Anuradha Kumari",
@@ -84,8 +95,10 @@ export const blogsContent: Blog[] = [
     id: 6,
     title: "Balancing Career and Family: A Modern Woman’s Guide",
     slug: "career-family-balance",
-    excerpt: "Expert strategies to harmonize professional ambitions with family life.",
-    content: "This post offers actionable advice for managing a successful career while nurturing a fulfilling family life. Discover time management techniques, prioritization tips, and resources designed to help modern women excel both at work and at home. Keywords: career, work-life balance, family, women empowerment.",
+    excerpt:
+      "Expert strategies to harmonize professional ambitions with family life.",
+    content:
+      "This post offers a detailed exploration of how modern women can successfully balance a flourishing career with a fulfilling family life. It highlights practical time management techniques, prioritization strategies, and self-care practices that help ease the demands of both professional and personal responsibilities. Through relatable real-life experiences and expert advice, the article discusses how flexible work practices and supportive family environments can lead to a more harmonious lifestyle. It outlines actionable tips on setting boundaries, effective communication with employers and family members, and the importance of carving out personal time for mental rejuvenation. The narrative also examines the role of technology and innovative scheduling tools in streamlining day-to-day tasks. By presenting inspiring stories of women who have mastered the art of balance, the piece motivates readers to pursue their professional goals without sacrificing family well-being. In effect, it provides a comprehensive guide to achieving a sustainable work-life balance that fosters both career success and personal fulfillment.",
     date: "2025-06-08",
     image: Blog6Image,
     author: "Anuradha Kumari",
@@ -95,8 +108,10 @@ export const blogsContent: Blog[] = [
     id: 7,
     title: "Women Empowering Women: Building Strong Networks",
     slug: "women-empowering-women",
-    excerpt: "Explore the impactful role of mentorship and networks in advancing women’s careers.",
-    content: "Focusing on the power of community, this post highlights inspiring stories of mentorship and peer support among women. It discusses how building robust networks can propel professional growth and create lasting personal connections. Keywords: mentorship, networking, empowerment, community support.",
+    excerpt:
+      "Explore the impactful role of mentorship and networks in advancing women’s careers.",
+    content:
+      "This insightful piece examines the power of networking and mentorship in promoting professional growth among women. It explores how building robust networks can open doors to opportunities, drive innovation, and foster a nurturing ecosystem for career advancement. Through detailed success stories and expert testimonials, the post highlights the multiple benefits of establishing both formal and informal support systems. The narrative explains how shared experiences, peer mentoring, and collaborative projects have enabled women to overcome entrenched barriers in the workplace. It also offers practical tips on effective networking—from participating in professional associations to leveraging social media platforms for community building. The discussion underscores that strong relationships and mutual support are essential elements that empower women to navigate complex career paths and achieve leadership roles. With inspiring insights and actionable advice, this article serves as a comprehensive guide for anyone looking to build and maintain meaningful professional connections.",
     date: "2025-06-05",
     image: Blog7Image,
     author: "Anuradha Kumari",
@@ -106,8 +121,10 @@ export const blogsContent: Blog[] = [
     id: 8,
     title: "Breaking Stereotypes: Redefining Beauty and Strength",
     slug: "breaking-stereotypes",
-    excerpt: "A deep dive into how women are challenging norms and celebrating diverse strength.",
-    content: "This article examines evolving perceptions of beauty and strength, showcasing how women are redefining societal norms. Discover inspiring insights and cultural shifts that celebrate diversity, resilience, and inner power. Keywords: stereotypes, inner strength, beauty, diversity.",
+    excerpt:
+      "A deep dive into how women are challenging norms and celebrating diverse strength.",
+    content:
+      "This article offers a thoughtful exploration of how women are challenging long-held stereotypes to redefine beauty and strength. It examines the evolution of traditional norms and sheds light on how diverse representations in media, art, and fashion are reshaping societal expectations. By incorporating expert opinions, cultural critiques, and personal narratives, the post illustrates the journey toward embracing authenticity over conventional standards. It discusses how women are increasingly fostering environments that celebrate individuality and encourage self-expression, ultimately redefining what it means to be both beautiful and strong. The narrative also addresses the challenges of overcoming narrow perceptions and the significance of community support in driving change. By highlighting innovative role models and transformative success stories, the article inspires readers to reject limiting stereotypes and embrace a more inclusive vision of empowerment that celebrates resilience, diversity, and inner strength.",
     date: "2025-06-03",
     image: Blog8Image,
     author: "Anuradha Kumari",
@@ -117,8 +134,10 @@ export const blogsContent: Blog[] = [
     id: 9,
     title: "Leadership Lessons: Strategies for Women in Management",
     slug: "women-leadership-lessons",
-    excerpt: "Unlock key strategies that empower women to excel in leadership and management roles.",
-    content: "This comprehensive guide offers leadership strategies specifically designed for women in management. Through expert analysis and practical case studies, it provides tips for enhancing decision-making, inspiring teams, and driving organizational success. Keywords: leadership, management, strategies, women in business.",
+    excerpt:
+      "Unlock key strategies that empower women to excel in leadership and management roles.",
+    content:
+      "This comprehensive guide delves into effective leadership strategies tailor-made for women in management. It explores the nuances of communication, decision-making, and conflict resolution through real-world examples and expert interviews. The article highlights the importance of developing emotional intelligence, resilience, and a strategic mindset to overcome workplace challenges and biases. Alongside practical advice on team building and innovation, the narrative showcases inspiring stories of successful female leaders who have set new benchmarks in management. With a focus on proactive learning and mentorship, the post provides actionable insights into navigating complex organizational dynamics while fostering inclusive, collaborative work cultures. It underscores that strong leadership is built on a foundation of continuous personal and professional development, encouraging aspiring women managers to harness their unique strengths and drive meaningful change.",
     date: "2025-06-01",
     image: Blog9Image,
     author: "Anuradha Kumari",
@@ -128,8 +147,10 @@ export const blogsContent: Blog[] = [
     id: 10,
     title: "Work-Life Balance: Strategies for Sustainable Success",
     slug: "work-life-balance-women",
-    excerpt: "Discover practical tips for achieving lasting work-life balance and self-care.",
-    content: "In this post, we explore actionable strategies for maintaining a healthy equilibrium between professional commitments and personal well-being. Learn time management techniques, stress reduction practices, and lifestyle adjustments that support both career and family life. Keywords: work-life balance, self-care, career success, time management.",
+    excerpt:
+      "Discover practical tips for achieving lasting work-life balance and self-care.",
+    content:
+      "In this comprehensive analysis of work-life balance, the article outlines a roadmap for achieving sustainable success in both personal and professional spheres. It provides detailed strategies on managing time effectively, setting clear boundaries, and incorporating self-care practices into daily routines. Through a blend of expert advice, real-life case studies, and practical tips, the narrative explores how women can streamline their schedules via effective planning, prioritize their well-being, and reduce stress while managing demanding careers. The discussion covers innovative approaches including mindfulness, flexible work options, and constructive collaboration with family and colleagues. By sharing tangible examples and step-by-step guidance, the post empowers readers to reassess their priorities and make lifestyle choices that result in improved mental, physical, and emotional health. This all-encompassing guide ultimately serves as both an inspirational call to action and a pragmatic toolkit for cultivating a balanced, healthy, and fulfilling life.",
     date: "2025-05-29",
     image: Blog10Image,
     author: "Anuradha Kumari",
