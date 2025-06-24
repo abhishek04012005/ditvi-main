@@ -1,5 +1,16 @@
 import { StaticImageData } from "next/image";
-import HealthImage from "../assets/healthcare.jpg";
+import Blog1Image from "../assets/blog/blog1.jpg"
+import Blog2Image from "../assets/blog/blog2.jpg"
+import Blog3Image from "../assets/blog/blog3.jpg"
+import Blog4Image from "../assets/blog/blog4.jpg"
+import Blog5Image from "../assets/blog/blog5.jpg"
+import Blog6Image from "../assets/blog/blog6.jpg"
+import Blog7Image from "../assets/blog/blog7.jpg"
+import Blog8Image from "../assets/blog/blog8.jpg"
+import Blog9Image from "../assets/blog/blog9.jpg"
+import Blog10Image from "../assets/blog/blog10.jpg"
+
+
 
 export interface Blog {
   category: string;
@@ -21,7 +32,7 @@ export const blogsContent: Blog[] = [
     excerpt: "Inspiring journeys of women who shattered glass ceilings, driving change and innovation.",
     content: "In this post, discover the remarkable stories of women who have defied expectations and led transformative efforts across industries. From corporate boardrooms to grassroots initiatives, learn how determination, innovation, and unyielding spirit have fueled their success. Keywords: women leaders, empowerment, breaking barriers.",
     date: "2025-06-20",
-    image: HealthImage,
+    image: Blog1Image,
     author: "Anuradha Kumari",
     category: ""
   },
@@ -32,7 +43,7 @@ export const blogsContent: Blog[] = [
     excerpt: "Explore how quality education transforms lives and empowers young girls globally.",
     content: "This article discusses the transformative power of education for young girls. It highlights successful programs, actionable strategies, and real-life stories that show how education builds self-confidence and opportunity. Keywords: education, empowerment, girls education, future leaders.",
     date: "2025-06-18",
-    image: HealthImage,
+    image: Blog2Image,
     author: "Anuradha Kumari",
     category: ""
   },
@@ -43,7 +54,7 @@ export const blogsContent: Blog[] = [
     excerpt: "Discover how trailblazing women are reshaping the tech landscape with groundbreaking ideas.",
     content: "The digital era is evolving thanks to innovative women in tech. This post features interviews and success stories that illustrate how female pioneers use creativity and technical expertise to lead digital innovation and disrupt the status quo. Keywords: technology, innovation, women in tech, digital transformation.",
     date: "2025-06-17",
-    image: HealthImage,
+    image: Blog3Image,
     author: "Anuradha Kumari",
     category: ""
   },
@@ -54,7 +65,7 @@ export const blogsContent: Blog[] = [
     excerpt: "Learn practical strategies and inspiring stories of women who built thriving startups.",
     content: "This blog post delves into the world of women entrepreneurs who are setting new standards in business leadership. Covering funding advice, market insights, and personal journeys, it provides an actionable roadmap for launching and growing a successful enterprise. Keywords: entrepreneurship, startups, women entrepreneurs, business growth.",
     date: "2025-06-15",
-    image: HealthImage,
+    image: Blog4Image,
     author: "Anuradha Kumari",
     category: ""
   },
@@ -65,7 +76,7 @@ export const blogsContent: Blog[] = [
     excerpt: "A comprehensive guide to managing mental health and achieving holistic well-being.",
     content: "This content focuses on mental health and wellness strategies tailored for women. Explore practical advice on stress management, mindfulness practices, and self-care routines, while understanding common challenges and effective solutions. Keywords: mental health, well-being, self-care, women wellness.",
     date: "2025-06-10",
-    image: HealthImage,
+    image: Blog5Image,
     author: "Anuradha Kumari",
     category: ""
   },
@@ -76,7 +87,7 @@ export const blogsContent: Blog[] = [
     excerpt: "Expert strategies to harmonize professional ambitions with family life.",
     content: "This post offers actionable advice for managing a successful career while nurturing a fulfilling family life. Discover time management techniques, prioritization tips, and resources designed to help modern women excel both at work and at home. Keywords: career, work-life balance, family, women empowerment.",
     date: "2025-06-08",
-    image: HealthImage,
+    image: Blog6Image,
     author: "Anuradha Kumari",
     category: ""
   },
@@ -87,7 +98,7 @@ export const blogsContent: Blog[] = [
     excerpt: "Explore the impactful role of mentorship and networks in advancing women’s careers.",
     content: "Focusing on the power of community, this post highlights inspiring stories of mentorship and peer support among women. It discusses how building robust networks can propel professional growth and create lasting personal connections. Keywords: mentorship, networking, empowerment, community support.",
     date: "2025-06-05",
-    image: HealthImage,
+    image: Blog7Image,
     author: "Anuradha Kumari",
     category: ""
   },
@@ -98,7 +109,7 @@ export const blogsContent: Blog[] = [
     excerpt: "A deep dive into how women are challenging norms and celebrating diverse strength.",
     content: "This article examines evolving perceptions of beauty and strength, showcasing how women are redefining societal norms. Discover inspiring insights and cultural shifts that celebrate diversity, resilience, and inner power. Keywords: stereotypes, inner strength, beauty, diversity.",
     date: "2025-06-03",
-    image: HealthImage,
+    image: Blog8Image,
     author: "Anuradha Kumari",
     category: ""
   },
@@ -109,7 +120,7 @@ export const blogsContent: Blog[] = [
     excerpt: "Unlock key strategies that empower women to excel in leadership and management roles.",
     content: "This comprehensive guide offers leadership strategies specifically designed for women in management. Through expert analysis and practical case studies, it provides tips for enhancing decision-making, inspiring teams, and driving organizational success. Keywords: leadership, management, strategies, women in business.",
     date: "2025-06-01",
-    image: HealthImage,
+    image: Blog9Image,
     author: "Anuradha Kumari",
     category: ""
   },
@@ -120,7 +131,7 @@ export const blogsContent: Blog[] = [
     excerpt: "Discover practical tips for achieving lasting work-life balance and self-care.",
     content: "In this post, we explore actionable strategies for maintaining a healthy equilibrium between professional commitments and personal well-being. Learn time management techniques, stress reduction practices, and lifestyle adjustments that support both career and family life. Keywords: work-life balance, self-care, career success, time management.",
     date: "2025-05-29",
-    image: HealthImage,
+    image: Blog10Image,
     author: "Anuradha Kumari",
     category: ""
   },

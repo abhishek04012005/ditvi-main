@@ -7,7 +7,6 @@ import DirectorImage1 from "../../assets/director/director1.png";
 import DirectorImage2 from "../../assets/director/director2.png"; 
 import DirectorImage3 from "../../assets/director/director3.png";
 
-
 const values = [
   {
     icon: "🤝",
@@ -29,6 +28,24 @@ const values = [
 const milestones = [
   { year: "2023", label: "Founded" },
   { year: "50+", label: "Projects" },
+];
+
+const directors = [
+  {
+    image: DirectorImage1,
+    name: "Anuradha Kumari",
+    bio: "Leading with vision and determination, Anuradha focuses on sustainable development and community empowerment initiatives.",
+  },
+  {
+    image: DirectorImage2,
+    name: "Kanchan Kumari",
+    bio: "Passionate about education and skill development, Kanchan drives programs that create opportunities for underprivileged youth.",
+  },
+  {
+    image: DirectorImage3,
+    name: "Indu Devi",
+    bio: "Specializing in women empowerment, Indu leads initiatives that promote gender equality and economic independence.",
+  },
 ];
 
 interface AboutProps {
@@ -56,7 +73,6 @@ const About = ({ isFullPage = false }: AboutProps) => {
     >
       <div className={styles.container}>
         <div className={styles.grid}>
-          {/* Mission Section */}
           <div className={styles.content}>
             <h2 className={styles.title}>
               Our <span className={styles.highlight}>Mission</span>
@@ -87,7 +103,6 @@ const About = ({ isFullPage = false }: AboutProps) => {
               ))}
             </div>
           </div>
-          {/* Mission Image */}
           <div className={styles.imageSection}>
             <div className={styles.imageWrapper}>
               <Image
@@ -102,72 +117,25 @@ const About = ({ isFullPage = false }: AboutProps) => {
           </div>
         </div>
         <div className={styles.directors}>
-          {/* Director Card */}
-          <div className={styles.directorCard}>
-            <div className={styles.directorPhoto}>
-              <Image
-                src={DirectorImage1}
-                alt="Anuradha Kumari, Director"
-                className={styles.directorImg}
-                width={80}
-                height={80}
-                priority
-              />
+          {directors.map((director) => (
+            <div className={styles.directorCard} key={director.name}>
+              <div className={styles.directorPhoto}>
+                <Image
+                  src={director.image}
+                  alt={`${director.name}, Director`}
+                  className={styles.directorImg}
+                  width={80}
+                  height={80}
+                  priority
+                />
+              </div>
+              <div className={styles.directorDetails}>
+                <span className={styles.directorRole}>Director</span>
+                <h3 className={styles.directorName}>{director.name}</h3>
+                <p className={styles.directorBio}>{director.bio}</p>
+              </div>
             </div>
-            <div className={styles.directorDetails}>
-              <span className={styles.directorRole}>Director</span>
-              <h3 className={styles.directorName}>Anuradha Kumari</h3>
-              <p className={styles.directorBio}>
-                Leading Ditvi Foundation with vision and compassion, Anuradha
-                Kumari inspires positive change and empowers women across
-                communities.
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.directorCard}>
-            <div className={styles.directorPhoto}>
-              <Image
-                src={DirectorImage2}
-                alt="Kanchan Kumari, Director"
-                className={styles.directorImg}
-                width={80}
-                height={80}
-                priority
-              />
-            </div>
-            <div className={styles.directorDetails}>
-              <span className={styles.directorRole}>Director</span>
-              <h3 className={styles.directorName}>Kanchan Kumari</h3>
-              <p className={styles.directorBio}>
-                Leading Ditvi Foundation with vision and compassion, Anuradha
-                Kumari inspires positive change and empowers women across
-                communities.
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.directorCard}>
-            <div className={styles.directorPhoto}>
-              <Image
-                src={DirectorImage3}
-                alt="Indu Devi, Director"
-                className={styles.directorImg}
-                width={80}
-                height={80}
-                priority
-              />
-            </div>
-            <div className={styles.directorDetails}>
-              <span className={styles.directorRole}>Director</span>
-              <h3 className={styles.directorName}>Indu Devi</h3>
-              <p className={styles.directorBio}>
-                Leading Ditvi Foundation with vision and compassion, Anuradha
-                Kumari inspires positive change and empowers women across
-                communities.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
