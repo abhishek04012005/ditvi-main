@@ -38,7 +38,7 @@ const directors = [
   },
   {
     image: DirectorImage2,
-    name: "Kanchan Kumari",
+    name: "Kanchan Devi",
     bio: "Passionate about education and skill development, Kanchan drives programs that create opportunities for underprivileged youth.",
   },
   {
